@@ -69,7 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 %{texmfdir}/fontname/culmus.map
 %{texmfdir}/fonts/afm/culmus
 %{texmfdir}/fonts/tfm/culmus
-%{texmfdir}/fonts/Type1/culmus
+%{texmfdir}/fonts/type1/culmus
 %{texmfdir}/fonts/vf/culmus
 %{texmfdir}/tex/generic/0%{name}
 %{texmfdir}/tex/latex/hebclass
