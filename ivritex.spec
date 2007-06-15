@@ -16,6 +16,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 URL:		http://ivritex.sourceforge.net/
 Requires:	tetex
 BuildRequires:	tetex-afm
+BuildRequires:	tetex-latex
 BuildRequires:	fonts-type1-hebrew
 BuildArch:	noarch
 # to have it auto-selected when choosing Hebrew at install time
