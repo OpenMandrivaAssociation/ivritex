@@ -39,7 +39,7 @@ classes and styles that will hopefully be useful to Hebrew authors.
 %install
 rm -rf $RPM_BUILD_ROOT
 # modern font paths
-perl -pi -e 's,/usr/X11R6/lib/X11/fonts/Type1,/usr/share/fonts/Type1/hebrew,g' fonts/culmus/Makefile
+perl -pi -e 's,/usr/X11R6/lib/X11/fonts/Type1,/usr/share/fonts/type1/hebrew,g' fonts/culmus/Makefile
 # we use .pfb fonts, not .pfa
 perl -pi -e 's,pfa,pfb,g' fonts/culmus/Makefile
 # elatex doesn't exist any more
