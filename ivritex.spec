@@ -12,6 +12,7 @@ Release:	%{release}
 Source0:	http://downloads.sourceforge.net/ivritex/%{name}-%{version}.tar.bz2
 License:	LPPL
 Group:		Publishing
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 URL:		http://ivritex.sourceforge.net/
 Requires:	tetex
 BuildRequires:	tetex-afm
