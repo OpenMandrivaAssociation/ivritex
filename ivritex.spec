@@ -1,6 +1,6 @@
 %define	name	ivritex
 %define	version	1.2.1
-%define	release	%mkrel 2
+%define	release	%mkrel 4
 
 %define texmfdir %{_datadir}/texmf
 %define updmap /usr/share/texmf/fonts/map/dvips/updmap
