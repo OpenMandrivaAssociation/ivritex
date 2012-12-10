@@ -1,6 +1,6 @@
 %define	name	ivritex
 %define	version	1.2.1
-%define	release	%mkrel 5
+%define	release	4
 
 %define texmfdir %{_datadir}/texmf
 %define updmap /usr/share/texmf/fonts/map/dvips/updmap
@@ -12,12 +12,12 @@ Release:	%{release}
 Source0:	http://downloads.sourceforge.net/ivritex/%{name}-%{version}.tar.bz2
 License:	LPPL
 Group:		Publishing
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 URL:		http://ivritex.sourceforge.net/
 Requires:	tetex
 BuildRequires:	tetex-afm
 BuildRequires:	tetex-latex
 BuildRequires:	fonts-type1-hebrew
+buildrequires:	texlive-collection-fontutils
 BuildArch:	noarch
 # to have it auto-selected when choosing Hebrew at install time
 Requires:	locales-he
@@ -39,7 +39,7 @@ classes and styles that will hopefully be useful to Hebrew authors.
 %install
 rm -rf $RPM_BUILD_ROOT
 # modern font paths
-perl -pi -e 's,/usr/X11R6/lib/X11/fonts/Type1,/usr/share/fonts/type1/hebrew,g' fonts/culmus/Makefile
+perl -pi -e 's,/usr/X11R6/lib/X11/fonts/Type1,/usr/share/fonts/Type1/hebrew,g' fonts/culmus/Makefile
 # we use .pfb fonts, not .pfa
 perl -pi -e 's,pfa,pfb,g' fonts/culmus/Makefile
 # elatex doesn't exist any more
@@ -56,9 +56,6 @@ mktexlsr
 updmap-sys --quiet
 mktexlsr
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files 
 %defattr(-,root,root,0755)  
 %doc README example/tests/hebhello.tex ChangeLog
@@ -74,3 +71,23 @@ rm -rf $RPM_BUILD_ROOT
 %{texmfdir}/fonts/vf/culmus
 %{texmfdir}/tex/generic/0%{name}
 %{texmfdir}/tex/latex/hebclass
+
+
+%changelog
+* Thu Jul 24 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.2.1-4mdv2009.0
++ Revision: 247322
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Fri Dec 14 2007 Thierry Vignaud <tvignaud@mandriva.com> 1.2.1-2mdv2008.1
++ Revision: 119934
+- fix build (type font path had changed case)
+- rebuild b/c of missing package on ia32
+
+* Fri Jun 15 2007 Adam Williamson <awilliamson@mandriva.com> 1.2.1-1mdv2008.0
++ Revision: 40114
+- Import ivritex
+
