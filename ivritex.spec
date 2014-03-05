@@ -14,10 +14,12 @@ BuildRequires:	tetex-afm
 BuildRequires:	tetex-latex
 BuildRequires:	fonts-type1-hebrew
 BuildRequires:	texlive-collection-fontutils
-BuildArch:	noarch
+# Just to make sure all deps are installed
+BuildRequires:	texlive-scheme-full
 # to have it auto-selected when choosing Hebrew at install time
 Requires:	locales-he
 Requires:	fonts-type1-hebrew
+BuildArch:	noarch
 
 %description
 IvriTeX provides Hebrew support for LaTeX. The project provides Hebrew
