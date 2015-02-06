@@ -4,7 +4,7 @@
 Summary:	Files for processing Hebrew LaTeX documents
 Name:		ivritex
 Version:	1.2.1
-Release:	5
+Release:	6
 License:	LPPL
 Group:		Publishing
 Url:		http://ivritex.sourceforge.net/
