@@ -7,7 +7,7 @@ Version:	1.2.1
 Release:	6
 License:	LPPL
 Group:		Publishing
-Url:		http://ivritex.sourceforge.net/
+Url:		https://ivritex.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/ivritex/%{name}-%{version}.tar.bz2
 Requires:	tetex
 BuildRequires:	tetex-afm
