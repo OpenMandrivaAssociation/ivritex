@@ -10,6 +10,7 @@ Group:		Publishing
 Url:		https://ivritex.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/ivritex/%{name}-%{version}.tar.bz2
 Requires:	tetex
+BuildRequires:	make
 BuildRequires:	tetex-afm
 BuildRequires:	tetex-latex
 BuildRequires:	fonts-type1-hebrew
